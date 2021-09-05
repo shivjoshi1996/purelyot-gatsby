@@ -1,11 +1,26 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
+import HomeBanner from '../components/HomeBanner';
 
-function IndexPage() {
+export default function IndexPage({ data }) {
+  const { sanityHomepage } = data;
   return (
     <div>
-      <p>Yo</p>
+      <HomeBanner
+        heroHeading={sanityHomepage.heroHeading}
+        heroDescription={sanityHomepage.heroDescription}
+        heroButtonText={sanityHomepage.heroButtonText}
+      />
     </div>
   );
 }
 
-export default IndexPage;
+export const query = graphql`
+  query {
+    sanityHomepage {
+      heroButtonText
+      heroDescription
+      heroHeading
+    }
+  }
+`;
