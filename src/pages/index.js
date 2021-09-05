@@ -1,7 +1,11 @@
 import * as React from 'react';
 
 function IndexPage() {
-  return <p>Yo this is index</p>;
+  return (
+    <div>
+      <p>Yo</p>
+    </div>
+  );
 }
 
 export default IndexPage;

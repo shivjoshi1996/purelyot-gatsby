@@ -31,5 +31,12 @@ module.exports = {
       },
       __key: 'images',
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat`],
+        display: 'swap',
+      },
+    },
   ],
 };
