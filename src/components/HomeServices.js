@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function HomeServices({ services }) {
   const servicesArray = services.nodes;
-  console.log(servicesArray);
   return (
     <>
       <h2>Services We Provide</h2>
