@@ -6,7 +6,7 @@ const StyledNavigation = styled.nav`
   align-items: center;
   justify-content: space-between;
   font-family: 'Montserrat', sans-serif;
-  width: 100vw;
+  width: 100%;
   background-color: #fec5bb;
   min-height: 10vh;
   padding: 2rem;

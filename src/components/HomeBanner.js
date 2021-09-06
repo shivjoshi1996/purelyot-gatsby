@@ -7,7 +7,7 @@ const StyledHeroBannerContainer = styled.div`
   padding-bottom: 1.5rem;
 
   svg {
-    width: 100vw;
+    width: 100%;
     min-height: 300px;
   }
 `;
