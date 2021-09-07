@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import HomeBanner from '../components/HomeBanner';
+import HomeHeroBanner from '../components/HomeHeroBanner';
 import HomeServices from '../components/HomeServices';
-import HomeCompanyBanner from '../components/HomeCompanyBanner';
+import HomeCompanyBanner from '../components/CompanyBanner';
 import ContactForm from '../components/ContactForm';
 
 export default function IndexPage({ data }) {
@@ -11,7 +11,7 @@ export default function IndexPage({ data }) {
   const { allSanityHomepageServices } = data;
   return (
     <div>
-      <HomeBanner
+      <HomeHeroBanner
         heroHeading={sanityHomepage.heroHeading}
         heroDescription={sanityHomepage.heroDescription}
         heroButtonText={sanityHomepage.heroButtonText}
@@ -23,8 +23,8 @@ export default function IndexPage({ data }) {
         whoWeAreDescription={sanityHomepage.whoWeAreDescription}
       />
       <ContactForm
-        contactFormTitle={contactFormTitle}
-        contactFormDescription={contactFormDescription}
+        contactFormTitle={sanityHomepage.contactFormTitle}
+        contactFormDescription={sanityHomepage.contactFormDescription}
       />
     </div>
   );

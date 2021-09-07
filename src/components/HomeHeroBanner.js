@@ -40,7 +40,7 @@ const StyledHeroBannerContentContainer = styled.div`
   padding: 1.5rem;
 `;
 
-export default function HomeBanner({
+export default function HomeHeroBanner({
   heroHeading,
   heroDescription,
   heroButtonText,
