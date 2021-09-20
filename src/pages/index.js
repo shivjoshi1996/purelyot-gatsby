@@ -6,7 +6,6 @@ import HomeCompanyBanner from '../components/CompanyBanner';
 import ContactForm from '../components/ContactForm';
 
 export default function IndexPage({ data }) {
-  console.log(data);
   const { sanityHomepage } = data;
   const { allSanityHomepageServices } = data;
   return (
@@ -16,7 +15,11 @@ export default function IndexPage({ data }) {
         heroDescription={sanityHomepage.heroDescription}
         heroButtonText={sanityHomepage.heroButtonText}
       />
-      <HomeServices services={allSanityHomepageServices} />
+      <HomeServices
+        services={allSanityHomepageServices}
+        servicesTitle={sanityHomepage.servicesTitle}
+        servicesDescription={sanityHomepage.servicesDescription}
+      />
       <HomeCompanyBanner
         whoWeAreTitle={sanityHomepage.whoWeAreTitle}
         whoWeAreCompanyName={sanityHomepage.whoWeAreCompanyName}

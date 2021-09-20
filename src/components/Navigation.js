@@ -2,14 +2,22 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const StyledNavigation = styled.nav`
+  width: 100%;
+  background-color: #fec5bb;
+  @media (min-width: 768px) {
+    padding-bottom: 2rem;
+  }
+`;
+
+const StyledNavigationWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  background-color: #fec5bb;
+  width: 90%;
+  max-width: 80rem;
   min-height: 10vh;
-  padding: 2rem;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 const StyledLogo = styled.a`
@@ -18,12 +26,20 @@ const StyledLogo = styled.a`
   color: #2f2e41;
   font-size: 1.5rem;
   font-weight: 600;
+
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
 `;
 
 const StyledNavigationLinks = styled.ul`
-  display: flex;
+  display: none;
   list-style: none;
   gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 
   a {
     text-decoration: none;
@@ -34,18 +50,20 @@ const StyledNavigationLinks = styled.ul`
 function Navigation() {
   return (
     <StyledNavigation>
-      <StyledLogo href="/">Purely OT</StyledLogo>
-      <StyledNavigationLinks>
-        <li>
-          <a href="/">Services</a>
-        </li>
-        <li>
-          <a href="/">Who We are</a>
-        </li>
-        <li>
-          <a href="/">Contact us</a>
-        </li>
-      </StyledNavigationLinks>
+      <StyledNavigationWrapper>
+        <StyledLogo href="/">Purely OT</StyledLogo>
+        <StyledNavigationLinks>
+          <li>
+            <a href="/">Services</a>
+          </li>
+          <li>
+            <a href="/">Who We are</a>
+          </li>
+          <li>
+            <a href="/">Contact us</a>
+          </li>
+        </StyledNavigationLinks>
+      </StyledNavigationWrapper>
     </StyledNavigation>
   );
 }

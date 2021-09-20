@@ -9,17 +9,32 @@ const StyledHeroBannerContainer = styled.div`
   svg {
     width: 100%;
     min-height: 300px;
+
+    @media (min-width: 768px) {
+      order: 1;
+      min-height: 400px;
+    }
   }
 `;
 
 const StyledHeroHeading = styled.h2`
   font-size: 2rem;
   padding-bottom: 0.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    line-height: 4.5rem;
+  }
 `;
 
 const StyledHeroDescription = styled.p`
   line-height: 1.7;
   margin-bottom: 2rem;
+  @media (min-width: 768px) {
+    margin-bottom: 3rem;
+    padding-right: 2rem;
+  }
 `;
 
 const StyledHeroButton = styled.a`
@@ -31,13 +46,31 @@ const StyledHeroButton = styled.a`
   font-size: 1rem;
   -webkit-transition: 1s;
   transition: 1s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2f2e41;
+    color: #fec5bb;
+  }
 `;
 
-const StyledHeroFlexContainer = styled.div``;
+const StyledHeroFlexContainer = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+`;
 
 const StyledHeroBannerContentContainer = styled.div`
   width: 100%;
   padding: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: unset;
+  }
 `;
 
 export default function HomeHeroBanner({

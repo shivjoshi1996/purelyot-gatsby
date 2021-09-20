@@ -5,20 +5,27 @@ const StyledContactFormWrapper = styled.div`
   background-color: #fec5bb;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  padding-left: 5%;
-  padding-right: 5%;
   color: #2f2e41;
 
   h2 {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
     margin-bottom: 1.5rem;
   }
 
   p {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
     margin-bottom: 2rem;
   }
 `;
 
 const StyledContactForm = styled.form`
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -68,6 +75,11 @@ const StyledButtonWrapper = styled.div`
     transition: 1s;
     cursor: pointer;
     color: #2f2e41;
+
+    &:hover {
+      background-color: #2f2e41;
+      color: #fec5bb;
+    }
   }
 `;
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledServicesSection = styled.section`
   width: 90%;
-  max-width: 70rem;
+  max-width: 80rem;
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -46,12 +46,18 @@ const StyledServiceImageWrapper = styled.div`
   }
 `;
 
-export default function HomeServices({ services }) {
+export default function HomeServices({
+  services,
+  servicesTitle,
+  servicesDescription,
+}) {
   const servicesArray = services.nodes;
   return (
     <StyledServicesSection>
-      <StyledServicesHeading>Services We Provide</StyledServicesHeading>
-      <StyledServicesDescription>Lorem</StyledServicesDescription>
+      <StyledServicesHeading>{servicesTitle}</StyledServicesHeading>
+      <StyledServicesDescription>
+        {servicesDescription}
+      </StyledServicesDescription>
       <StyledServicesGrid>
         {servicesArray.map((service) => (
           <StyledServiceItem key={service.serviceTitle}>
