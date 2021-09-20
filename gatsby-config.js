@@ -1,14 +1,20 @@
+/* eslint-disable */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
+    siteUrl: 'https://www.purelyot.com',
     title: 'purelyot',
   },
   plugins: [
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId: 'ad5rfw5p',
-        dataset: 'production',
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        token: process.env.SANITY_TOKEN,
       },
     },
     'gatsby-plugin-styled-components',
