@@ -18,10 +18,34 @@ const StyledFooter = styled.footer`
   }
   li {
     padding-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      padding: unset;
+      margin-left: 3%;
+    }
+  }
+
+  ul {
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 70%;
+    }
   }
 `;
 
-const StyledFooterWrapper = styled.div``;
+const StyledFooterWrapper = styled.div`
+  @media (min-width: 768px) {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+`;
 
 const StyledFooterLogo = styled.a`
   font-family: 'Recoleta', sans-serif;
@@ -29,17 +53,28 @@ const StyledFooterLogo = styled.a`
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   display: block;
+
+  @media (min-width: 768px) {
+    padding: unset;
+    width: 30%;
+    text-align: left;
+  }
 `;
 
 const StyledFooterCopyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.8rem;
+
+  @media (min-width: 768px) {
+    margin: unset;
+    padding-top: 1rem;
+  }
 `;
 
 export default function Footer() {
   return (
     <StyledFooter>
-      <div>
+      <StyledFooterWrapper>
         <StyledFooterLogo href="./">Purely OT</StyledFooterLogo>
         <ul>
           <li>
@@ -58,7 +93,7 @@ export default function Footer() {
         <StyledFooterCopyright>
           &#169; 2021 Purely Occupational Therapy Inc.
         </StyledFooterCopyright>
-      </div>
+      </StyledFooterWrapper>
     </StyledFooter>
   );
 }

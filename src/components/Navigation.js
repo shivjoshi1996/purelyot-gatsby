@@ -6,6 +6,13 @@ const StyledNavigation = styled.nav`
   background-color: #fec5bb;
   @media (min-width: 768px) {
     padding-bottom: 2rem;
+
+    a {
+      transition: 0.5s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 `;
 
