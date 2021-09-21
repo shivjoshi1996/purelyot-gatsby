@@ -16,6 +16,7 @@ const StyledServicesHeading = styled.h2`
 
 const StyledServicesDescription = styled.p`
   margin-bottom: 2rem;
+  max-width: 30rem;
 `;
 
 const StyledServicesGrid = styled.div`

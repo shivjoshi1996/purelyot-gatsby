@@ -6,6 +6,10 @@ const StyledHeroBannerContainer = styled.div`
   color: #2f2e41;
   padding-bottom: 1.5rem;
 
+  @media (min-width: 768px) {
+    padding-bottom: 2.5rem;
+  }
+
   svg {
     width: 100%;
     min-height: 300px;

@@ -8,18 +8,19 @@ const StyledContactFormWrapper = styled.div`
   color: #2f2e41;
 
   h2 {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 80rem;
     margin-bottom: 1.5rem;
   }
 
   p {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 80rem;
+    max-width: 30rem;
     margin-bottom: 2rem;
   }
+`;
+
+const StyledContactHeadingWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
 `;
 
 const StyledContactForm = styled.form`
@@ -63,7 +64,7 @@ const StyledContactForm = styled.form`
 `;
 
 const StyledButtonWrapper = styled.div`
-  text-align: center;
+  text-align: left;
   margin-top: 3rem;
 
   input[type='submit'] {
@@ -89,8 +90,10 @@ export default function ContactForm({
 }) {
   return (
     <StyledContactFormWrapper>
-      <h2>{contactFormTitle}</h2>
-      <p>{contactFormDescription}</p>
+      <StyledContactHeadingWrapper>
+        <h2>{contactFormTitle}</h2>
+        <p>{contactFormDescription}</p>
+      </StyledContactHeadingWrapper>
 
       <StyledContactForm>
         <label htmlFor="name">Name:</label>
