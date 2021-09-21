@@ -97,7 +97,6 @@ export default function ContactForm({
 
       <StyledContactForm
         method="post"
-        action="/success"
         netlify-honeypot="bot-field"
         data-netlify="true"
         name="contact"
