@@ -95,7 +95,15 @@ export default function ContactForm({
         <p>{contactFormDescription}</p>
       </StyledContactHeadingWrapper>
 
-      <StyledContactForm>
+      <StyledContactForm
+        method="post"
+        action="/success"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        name="contact"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
         <label htmlFor="name">Name:</label>
         <input type="text" id="name" name="name" required />
         <label htmlFor="email">Email:</label>
