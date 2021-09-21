@@ -35,6 +35,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	line-height: 1;
 }
@@ -52,6 +55,20 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+input[type=text], input[type=submit] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	-moz-appearance: none;
+	border-radius: 0;
+	
+}
+textarea {
+	-webkit-border-radius: 0px;
+	border-radius: 0;
+}
+input {
+	border-radius: 0;
 }
 `;
 
