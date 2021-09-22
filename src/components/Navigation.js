@@ -1,6 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { gsap } from 'gsap';
+import { useRef, useEffect, useLayoutEffect } from 'react';
 
 const StyledNavigation = styled.nav`
   width: 100%;
@@ -8,11 +10,11 @@ const StyledNavigation = styled.nav`
   @media (min-width: 768px) {
     padding-bottom: 2rem;
 
-    a {
+    /* a {
       transition: 0.5s;
       &:hover {
         opacity: 0.5;
-      }
+      } */
     }
   }
 `;
@@ -56,19 +58,38 @@ const StyledNavigationLinks = styled.ul`
 `;
 
 function Navigation() {
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+  const tl = useRef();
+
+  useLayoutEffect(() => {
+    tl.current = gsap
+      .timeline()
+      .from(q('.logo'), { opacity: 0, duration: 1 })
+      .from(q('.link'), { opacity: 0, duration: 1 });
+  }, []);
+
   return (
-    <StyledNavigation>
+    <StyledNavigation ref={el}>
       <StyledNavigationWrapper>
-        <StyledLogo href="/">Purely OT</StyledLogo>
+        <StyledLogo className="logo" href="/">
+          Purely OT
+        </StyledLogo>
         <StyledNavigationLinks>
           <li>
-            <AnchorLink to="/#services">Services</AnchorLink>
+            <AnchorLink className="link" to="/#services">
+              Services
+            </AnchorLink>
           </li>
           <li>
-            <a href="/#who-we-are">Who We are</a>
+            <AnchorLink className="link" to="/#who-we-are">
+              Who We are
+            </AnchorLink>
           </li>
           <li>
-            <a href="/#contact">Contact us</a>
+            <AnchorLink className="link" to="/#contact">
+              Contact us
+            </AnchorLink>
           </li>
         </StyledNavigationLinks>
       </StyledNavigationWrapper>

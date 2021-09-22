@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
@@ -58,23 +58,6 @@ const StyledHeroDescription = styled.p`
   @media (min-width: 768px) {
     margin-bottom: 3rem;
     padding-right: 2rem;
-  }
-`;
-
-const StyledHeroButton = styled.a`
-  background-color: white;
-  font-weight: 500;
-  padding: 15px 22px;
-  border-radius: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  -webkit-transition: 1s;
-  transition: 1s;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #2f2e41;
-    color: #fec5bb;
   }
 `;
 
