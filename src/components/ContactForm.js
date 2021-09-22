@@ -89,7 +89,7 @@ export default function ContactForm({
   contactFormDescription,
 }) {
   return (
-    <StyledContactFormWrapper>
+    <StyledContactFormWrapper id="contact">
       <StyledContactHeadingWrapper>
         <h2>{contactFormTitle}</h2>
         <p>{contactFormDescription}</p>

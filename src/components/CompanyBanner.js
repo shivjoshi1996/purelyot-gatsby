@@ -32,7 +32,7 @@ export default function HomeCompanyBanner({
   whoWeAreCompanyName,
 }) {
   return (
-    <StyledCompanyBannerContainer>
+    <StyledCompanyBannerContainer id="who-we-are">
       <StyledCompanyBannerTitle>{whoWeAreTitle}</StyledCompanyBannerTitle>
       <StyledCompanyBannerName>{whoWeAreCompanyName}</StyledCompanyBannerName>
       <StyledCompanyBannerDescription>

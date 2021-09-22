@@ -54,7 +54,7 @@ export default function HomeServices({
 }) {
   const servicesArray = services.nodes;
   return (
-    <StyledServicesSection>
+    <StyledServicesSection id="services">
       <StyledServicesHeading>{servicesTitle}</StyledServicesHeading>
       <StyledServicesDescription>
         {servicesDescription}

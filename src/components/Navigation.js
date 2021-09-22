@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const StyledNavigation = styled.nav`
   width: 100%;
@@ -61,13 +62,13 @@ function Navigation() {
         <StyledLogo href="/">Purely OT</StyledLogo>
         <StyledNavigationLinks>
           <li>
-            <a href="/">Services</a>
+            <AnchorLink to="/#services">Services</AnchorLink>
           </li>
           <li>
-            <a href="/">Who We are</a>
+            <a href="/#who-we-are">Who We are</a>
           </li>
           <li>
-            <a href="/">Contact us</a>
+            <a href="/#contact">Contact us</a>
           </li>
         </StyledNavigationLinks>
       </StyledNavigationWrapper>

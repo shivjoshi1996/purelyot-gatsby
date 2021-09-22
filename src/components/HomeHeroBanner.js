@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const StyledHeroBannerContainer = styled.div`
   background-color: #fec5bb;
@@ -17,6 +18,25 @@ const StyledHeroBannerContainer = styled.div`
     @media (min-width: 768px) {
       order: 1;
       min-height: 400px;
+    }
+  }
+
+  a {
+    color: #2f2e41;
+    background-color: white;
+    font-weight: 500;
+    padding: 15px 22px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    -webkit-transition: 1s;
+    transition: 1s;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #2f2e41;
+      color: #fec5bb;
     }
   }
 `;
@@ -312,7 +332,7 @@ export default function HomeHeroBanner({
         <StyledHeroBannerContentContainer>
           <StyledHeroHeading>{heroHeading}</StyledHeroHeading>
           <StyledHeroDescription>{heroDescription}</StyledHeroDescription>
-          <StyledHeroButton>{heroButtonText}</StyledHeroButton>
+          <AnchorLink to="/#services">{heroButtonText}</AnchorLink>
         </StyledHeroBannerContentContainer>
       </StyledHeroFlexContainer>
     </StyledHeroBannerContainer>
