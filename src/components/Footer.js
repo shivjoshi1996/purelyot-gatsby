@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const StyledFooter = styled.footer`
   background-color: #171717;
@@ -78,16 +79,16 @@ export default function Footer() {
         <StyledFooterLogo href="./">Purely OT</StyledFooterLogo>
         <ul>
           <li>
-            <a href="./">Home</a>
+            <AnchorLink to="/">Home</AnchorLink>
           </li>
           <li>
-            <a href="./">Services</a>
+            <AnchorLink to="/#services">Services</AnchorLink>
           </li>
           <li>
-            <a href="./">About Us</a>
+            <AnchorLink to="/#who-we-are">Who We are</AnchorLink>
           </li>
           <li>
-            <a href="./">Contact</a>
+            <AnchorLink to="/#contact">Contact</AnchorLink>
           </li>
         </ul>
         <StyledFooterCopyright>
