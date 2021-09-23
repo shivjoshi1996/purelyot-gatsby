@@ -22,6 +22,12 @@ const StyledHeroBannerContainer = styled.div`
     animation-delay: 2s;
   }
 
+  #undraw_Hiking_re_k0bc_2 {
+    @media (max-width: 414px) {
+      clip-path: inset(0px 0px 0px 0px);
+    }
+  }
+
   @media (min-width: 768px) {
     padding-bottom: 2.5rem;
   }
@@ -127,7 +133,7 @@ export default function HomeHeroBanner({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g id="undraw_Hiking_re_k0bc 2" clipPath="url(#clip0)">
+          <g id="undraw_Hiking_re_k0bc_2" clipPath="url(#clip0)">
             <path
               id="Vector"
               d="M231.781 224.54C231.781 224.54 231.981 220.361 236.071 220.847L231.781 224.54Z"
