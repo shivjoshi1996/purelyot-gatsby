@@ -9,7 +9,7 @@ export default function IndexPage({ data }) {
   const { sanityHomepage } = data;
   const { allSanityHomepageServices } = data;
   return (
-    <>
+    <div>
       <HomeHeroBanner
         heroHeading={sanityHomepage.heroHeading}
         heroDescription={sanityHomepage.heroDescription}
@@ -29,7 +29,7 @@ export default function IndexPage({ data }) {
         contactFormTitle={sanityHomepage.contactFormTitle}
         contactFormDescription={sanityHomepage.contactFormDescription}
       />
-    </>
+    </div>
   );
 }
 

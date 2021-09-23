@@ -76,7 +76,7 @@ export default function Footer() {
   return (
     <StyledFooter>
       <StyledFooterWrapper>
-        <StyledFooterLogo href="/">Purely OT</StyledFooterLogo>
+        <StyledFooterLogo href="./">Purely OT</StyledFooterLogo>
         <ul>
           <li>
             <AnchorLink to="/">Home</AnchorLink>
