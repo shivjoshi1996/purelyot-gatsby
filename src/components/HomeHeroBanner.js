@@ -1,7 +1,6 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { gsap } from 'gsap';
 
 const StyledHeroBannerContainer = styled.div`
   background-color: #fec5bb;
@@ -34,7 +33,6 @@ const StyledHeroBannerContainer = styled.div`
     transition: 1s;
     cursor: pointer;
     text-decoration: none;
-    display: none;
 
     &:hover {
       background-color: #2f2e41;
@@ -87,21 +85,8 @@ export default function HomeHeroBanner({
   heroDescription,
   heroButtonText,
 }) {
-  const el = useRef();
-  const q = gsap.utils.selector(el);
-  const tl = useRef();
-
-  useLayoutEffect(() => {
-    tl.current = gsap
-      .timeline()
-      .from(q('.hero-image'), { opacity: 0, y: 10, duration: 0.5, delay: 2 })
-      .from(q('.hero-heading'), { opacity: 0, y: 10, duration: 0.5 })
-      .from(q('.hero-description'), { opacity: 0, y: 10, duration: 0.5 })
-      .from(q('.hero-button'), { opacity: 0, duration: 0.5 });
-  }, []);
-
   return (
-    <StyledHeroBannerContainer ref={el}>
+    <StyledHeroBannerContainer>
       <StyledHeroFlexContainer>
         <svg
           width="261"
@@ -109,7 +94,6 @@ export default function HomeHeroBanner({
           viewBox="0 0 261 254"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hero-image"
         >
           <g id="undraw_Hiking_re_k0bc 2" clipPath="url(#clip0)">
             <path
@@ -329,15 +313,9 @@ export default function HomeHeroBanner({
         </svg>
 
         <StyledHeroBannerContentContainer>
-          <StyledHeroHeading className="hero-heading">
-            {heroHeading}
-          </StyledHeroHeading>
-          <StyledHeroDescription className="hero-description">
-            {heroDescription}
-          </StyledHeroDescription>
-          <AnchorLink className="hero-button" to="/#services">
-            {heroButtonText}
-          </AnchorLink>
+          <StyledHeroHeading>{heroHeading}</StyledHeroHeading>
+          <StyledHeroDescription>{heroDescription}</StyledHeroDescription>
+          <AnchorLink to="/#services">{heroButtonText}</AnchorLink>
         </StyledHeroBannerContentContainer>
       </StyledHeroFlexContainer>
     </StyledHeroBannerContainer>
