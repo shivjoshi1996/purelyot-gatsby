@@ -94,7 +94,7 @@ export default function HomeHeroBanner({
   useLayoutEffect(() => {
     tl.current = gsap
       .timeline()
-      .from(q('.hero-image'), { opacity: 0, y: 10, duration: 0.5, delay: 1 })
+      .from(q('.hero-image'), { opacity: 0, y: 10, duration: 0.5, delay: 2 })
       .from(q('.hero-heading'), { opacity: 0, y: 10, duration: 0.5 })
       .from(q('.hero-description'), { opacity: 0, y: 10, duration: 0.5 })
       .from(q('.hero-button'), { opacity: 0, duration: 0.5 });
