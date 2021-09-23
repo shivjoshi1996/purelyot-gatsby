@@ -1,11 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { birds } from '../styles/animations';
 
 const StyledHeroBannerContainer = styled.div`
   background-color: #fec5bb;
   color: #2f2e41;
   padding-bottom: 1.5rem;
+
+  #bird1 {
+    animation: ${birds} 17s infinite backwards linear;
+  }
+
+  #bird2 {
+    animation: ${birds} 17s infinite backwards linear;
+    animation-delay: 5s;
+  }
+
+  #bird3 {
+    animation: ${birds} 17s infinite backwards linear;
+    animation-delay: 2s;
+  }
 
   @media (min-width: 768px) {
     padding-bottom: 2.5rem;
