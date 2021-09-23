@@ -15,7 +15,6 @@ const StyledHeroBannerContainer = styled.div`
   svg {
     width: 100%;
     min-height: 300px;
-    visibility: hidden;
 
     @media (min-width: 768px) {
       order: 1;
@@ -47,7 +46,6 @@ const StyledHeroBannerContainer = styled.div`
 const StyledHeroHeading = styled.h2`
   font-size: 2rem;
   padding-bottom: 0.5rem;
-  visibility: hidden;
 
   @media (min-width: 768px) {
     font-size: 3.5rem;
@@ -59,7 +57,6 @@ const StyledHeroHeading = styled.h2`
 const StyledHeroDescription = styled.p`
   line-height: 1.7;
   margin-bottom: 2rem;
-  visibility: hidden;
   @media (min-width: 768px) {
     margin-bottom: 3rem;
     padding-right: 2rem;
@@ -97,25 +94,9 @@ export default function HomeHeroBanner({
   useLayoutEffect(() => {
     tl.current = gsap
       .timeline()
-      .from(q('.hero-image'), {
-        opacity: 0,
-        y: 10,
-        duration: 0.5,
-        delay: 1,
-        autoAlpha: 0,
-      })
-      .from(q('.hero-heading'), {
-        opacity: 0,
-        y: 10,
-        duration: 0.5,
-        autoAlpha: 0,
-      })
-      .from(q('.hero-description'), {
-        opacity: 0,
-        y: 10,
-        duration: 0.5,
-        autoAlpha: 0,
-      })
+      .from(q('.hero-image'), { opacity: 0, y: 10, duration: 0.5, delay: 1 })
+      .from(q('.hero-heading'), { opacity: 0, y: 10, duration: 0.5 })
+      .from(q('.hero-description'), { opacity: 0, y: 10, duration: 0.5 })
       .from(q('.hero-button'), { opacity: 0, duration: 0.5 });
   }, []);
 
