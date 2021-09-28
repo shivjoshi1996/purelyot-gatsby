@@ -40,6 +40,7 @@ const StyledContactForm = styled.form`
 
   input[type='text'],
   input[type='email'] {
+    font-family: 'Montserrat', san-serif;
     width: 100%;
     border: none;
     background-color: #fec5bb;
@@ -58,6 +59,7 @@ const StyledContactForm = styled.form`
     background-color: #fec5bb;
     border-bottom: 1px solid white;
     resize: none;
+    font-family: 'Montserrat', san-serif;
     font-size: 1rem;
     color: #2f2e41;
   }
