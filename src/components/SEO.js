@@ -6,13 +6,14 @@ import { useStaticQuery, graphql } from 'gatsby';
 const SEO = ({ title, description, article }) => {
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, titleTemplate, defaultDescription, siteUrl } =
+  const { defaultTitle, titleTemplate, defaultDescription, siteUrl, image } =
     site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     siteUrl: `${siteUrl}`,
+    image,
   };
 
   return (
@@ -28,6 +29,8 @@ const SEO = ({ title, description, article }) => {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
+
+      {seo.image && <meta property="og:image" content={seo.image} />}
     </Helmet>
   );
 };
@@ -54,6 +57,7 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         siteUrl
+        image
       }
     }
   }
