@@ -6,7 +6,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.purelyot.com',
-    title: 'purelyot',
+    title: 'Purely OT | Private Occupational Therapy services in Vancouver',
+    description: 'Occupational Therapy services within the Greater Vancouver area, including home & work assessments, return to work, brain injury, PGAP, and chronic pain.',
   },
   plugins: [
     {
