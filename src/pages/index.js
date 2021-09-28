@@ -4,12 +4,14 @@ import HomeHeroBanner from '../components/HomeHeroBanner';
 import HomeServices from '../components/HomeServices';
 import HomeCompanyBanner from '../components/CompanyBanner';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 
 export default function IndexPage({ data }) {
   const { sanityHomepage } = data;
   const { allSanityHomepageServices } = data;
   return (
     <div>
+      <SEO />
       <HomeHeroBanner
         heroHeading={sanityHomepage.heroHeading}
         heroDescription={sanityHomepage.heroDescription}
