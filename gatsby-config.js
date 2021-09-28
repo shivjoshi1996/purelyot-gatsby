@@ -6,7 +6,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.purelyot.com',
-    title: 'purelyot',
+    title: 'Purely OT',
+    titleTemplate: 'Purely OT | Private Occupational Therapy services in Vancouver',
+    description: 'Occupational Therapy services within the Greater Vancouver area, including home & work assessments, return to work, brain injury, PGAP, and chronic pain.',
+    keywords: 'Occupational Therapy, Vancouver OT, Health Services',
+    image: '/favicon.png',
   },
   plugins: [
     {
@@ -24,7 +28,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        icon: 'src/images/favicon.png',
       },
     },
     'gatsby-plugin-sharp',
