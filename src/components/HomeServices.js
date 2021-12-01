@@ -21,8 +21,12 @@ const StyledServicesDescription = styled.p`
 
 const StyledServicesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const StyledServiceItem = styled.div`
@@ -32,7 +36,7 @@ const StyledServiceItem = styled.div`
     margin-bottom: 0.5rem;
   }
   p {
-    max-width: 25rem;
+    width: 100%;
   }
 `;
 
