@@ -36,7 +36,7 @@ const StyledLogo = styled.a`
   font-weight: 600;
 
   @media (min-width: 768px) {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 `;
 
