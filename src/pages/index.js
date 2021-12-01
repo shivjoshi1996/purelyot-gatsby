@@ -8,7 +8,6 @@ import SEO from '../components/SEO';
 
 export default function IndexPage({ data }) {
   const { sanityHomepage } = data;
-  const { allSanityHomepageServices } = data;
   return (
     <div>
       <SEO />
@@ -18,7 +17,7 @@ export default function IndexPage({ data }) {
         heroButtonText={sanityHomepage.heroButtonText}
       />
       <HomeServices
-        services={allSanityHomepageServices}
+        services={sanityHomepage.services}
         servicesTitle={sanityHomepage.servicesTitle}
         servicesDescription={sanityHomepage.servicesDescription}
       />
@@ -48,14 +47,11 @@ export const query = graphql`
       whoWeAreDescription
       contactFormTitle
       contactFormDescription
-    }
-    allSanityHomepageServices {
-      nodes {
+      services {
         serviceTitle
         serviceDescription
         serviceImage {
           asset {
-            id
             gatsbyImageData
           }
         }

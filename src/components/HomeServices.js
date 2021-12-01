@@ -56,7 +56,6 @@ export default function HomeServices({
   servicesTitle,
   servicesDescription,
 }) {
-  const servicesArray = services.nodes;
   return (
     <StyledServicesSection id="services">
       <StyledServicesHeading>{servicesTitle}</StyledServicesHeading>
@@ -64,19 +63,25 @@ export default function HomeServices({
         {servicesDescription}
       </StyledServicesDescription>
       <StyledServicesGrid>
-        {servicesArray.map((service) => (
-          <StyledServiceItem key={service.serviceTitle}>
-            <StyledServiceImageWrapper key={service.serviceTitle}>
-              <img
-                src={
-                  service.serviceImage.asset.gatsbyImageData.images.fallback.src
-                }
-              />
-            </StyledServiceImageWrapper>
-            <h3>{service.serviceTitle}</h3>
-            <p>{service.serviceDescription}</p>
-          </StyledServiceItem>
-        ))}
+        {services.length > 0
+          ? services.map((service) => (
+              <StyledServiceItem key={service.serviceTitle}>
+                <StyledServiceImageWrapper key={service.serviceTitle}>
+                  {service.serviceImage ? (
+                    <img
+                      src={
+                        service.serviceImage.asset.gatsbyImageData.images
+                          .fallback.src
+                      }
+                      alt=""
+                    />
+                  ) : null}
+                </StyledServiceImageWrapper>
+                <h3>{service.serviceTitle}</h3>
+                <p>{service.serviceDescription}</p>
+              </StyledServiceItem>
+            ))
+          : null}
       </StyledServicesGrid>
     </StyledServicesSection>
   );
