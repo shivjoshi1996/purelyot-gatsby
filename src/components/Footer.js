@@ -92,7 +92,7 @@ export default function Footer() {
           </li>
         </ul>
         <StyledFooterCopyright>
-          &#169; 2021 Purely Occupational Therapy Inc.
+          &#169; 2022 Purely Occupational Therapy Inc.
         </StyledFooterCopyright>
       </StyledFooterWrapper>
     </StyledFooter>
